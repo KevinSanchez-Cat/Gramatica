@@ -1,0 +1,237 @@
+<Proyecto> → 66 54 <ComentariosIniciales> <Clase> 55  
+<ComentariosIniciales> → <Comentario> <ComentariosIniciales> 
+<ComentariosIniciales> → λ 
+<ClaseG> → <Paquete> <Clase> <ClaseG>
+<ClaseG> → λ 
+<Paquete> → 5  67  52 
+<Clase> → <Comentario> <Clase>
+<Clase> → <Libreria> <Clase>
+<Clase> → <ModificadorAcceso> <Estatico> <Polimorfismo>
+<Clase> → λ 
+<Comentario> → 79  
+<Comentario> → 78 
+<Libreria> → 6 77 52
+<ModificadorAcceso> → 1 
+<ModificadorAcceso> →  2 
+<ModificadorAcceso> →  3   
+<ModificadorAcceso> →  λ  
+<Estatico> → 7  
+<Estatico> →  λ  
+<Polimorfismo> → 20 4  68  <Extension> 54 <Instruccion> 55  
+<Polimorfismo> → 17  4  68  <Extension> 54 <Instruccion> 55  
+<Polimorfismo> → 4  68  <Extension> 54 <Instruccion> 55 
+<Extension> → <Herencia>  
+<Extension> → <Implementacion>  
+<Extension> → λ  
+<Herencia> → 18  68   <Implementacion> 
+<Implementacion> → <Implementar> 
+<Implementacion> → λ  
+<Implementar> →  19  68  <Implementar1>  
+<Implementar1>  →  50  68  <Implementar2>  
+<Implementar2> →  <Implementar1>  
+<Implementar2> →  λ   
+<Instruccion> → <Comentario> <Instruccion> 
+<Instruccion> → <ModificadorAcceso> <ControlAcceso>  <Instruccion> 
+<Instruccion> → <AsignacionAtributo> <Instruccion>
+<Instruccion> →  λ 
+<ControlAcceso> →   7 <Encapsulamiento>
+<ControlAcceso> → <Encapsulamiento>
+<ControlAcceso> → <Constructor> 
+<Encapsulamiento> → <Atributo> 
+<Encapsulamiento> → <Metodo>  
+<Atributo> →  <DeclaracionAtributo>   
+<Atributo> →  <Objeto>  
+<Atributo> →  <AsignacionAtributo> 52  
+<DeclaracionAtributo> → <TipoDato> <Arreglo> <AsignacionAtributo>  <ConjuntoAtributo> 52    
+<ConjuntoAtributo> → 50 <AsignacionAtributo> <ConjuntoAtributo>
+<ConjuntoAtributo>  → λ
+<AsignacionAtributo>  → <Variable> 
+<AsignacionAtributo>  → <Constante>   
+<Variable> → 70 <Arreglo> <AsignacionAtributo1>   
+<Constante> → 71  <Arreglo>  <AsignacionAtributo2>   
+<Arreglo> → 56 <AsignacionArreglo> 57 <Arreglo1>  
+<Arreglo> →  λ  
+<Arreglo1> → 56 <AsignacionArreglo> 57 <Arreglo1>  
+<Arreglo1> → λ  
+<AsignacionArreglo> → 73  
+<AsignacionArreglo> →  λ  
+<TipoAtributo> →  70 
+<TipoAtributo> → 71
+<TipoDato> → 42   
+<TipoDato> →  43 
+<AsignacionAtributo1> → <AsignacionAtributo2>
+<AsignacionAtributo1> → <Iteracion>   
+<AsignacionAtributo1> → λ
+<AsignacionAtributo2>  → <Igualacion>
+<Igualacion> → 95 <AsignacionNuevo>
+<Igualacion> → 47 <Asignacion>  
+<AsignacionNuevo> → <Asignacion>
+<AsignacionNuevo>  → 24 <TipoDato> 56 73 57 
+<Asignacion> → <ExpresionAsignacion> 
+<Asignacion> → 15 58  <Lectura> 59  
+
+
+<ExpresionAsignacion> → 73 <OperadorNum>
+<ExpresionAsignacion> → 74 <OperadorNum>
+<ExpresionAsignacion> → 75 <OperadorCad>
+<ExpresionAsignacion> → 76 <OperadorCad>
+<ExpresionAsignacion> → <Boleano> <OperadorBin>
+<ExpresionAsignacion> → <LlamadaFuncion> <OperadorX>
+<ExpresionAsignacion> → <LlamadaAtributo> <TipoAtributo> <OperadorX>
+<ExpresionAsignacion> → 26 <OperadorNul>  
+<ExpresionAsignacion> → 58 <Operacion>  59 
+<ExpresionAsignacion> → 15 58 <Lectura> 59
+<ExpresionAsignacion> → <OperacionUnaria> <OperadorBin>
+ 
+<Operadores> →<OperadorN>
+<Operadores> →<OperadorC>
+<Operadores> →<OperadorB>
+<Operadores> →<OperadorV>    
+
+
+<OperadorNum> → <OperadorN> 
+<OperadorNum> →  λ
+<OperadorCad> → <OperadorC> 
+<OperadorCad> →  λ  
+<OperadorBin> → <OperadorB> 
+<OperadorBin> →  λ  
+<OperadorX> → <OperadorV> 
+<OperadorX> → λ
+<OperadorNul> →  <OperadorSuma>
+<OperadorNul> → λ  
+
+<OperadorN> →  44 <OperacionAritmetica> 
+<OperadorN> →  45 <OperacionAritmetica>
+<OperadorN> →  46 <OperacionRelacional>
+<OperadorC> → 44 <Concatenacion>
+<OperadorC> → 46 <OperacionRelacional>
+<OperadorB> → 46 <OperacionLogica>
+<OperadorV> → 44 <OperadorSuma>
+<OperadorV> → 46 <OperacionRelacional>
+<OperadorV> → 48 <OperacionLogica>
+<OperadorSuma> → <OperacionAritmetica>
+<OperadorSuma> → <OperacionRelacional>
+<OperadorSuma> → <Concatenacion>
+<Objeto> → <DeclaracionObjeto>  
+<Objeto> →  <InicializarObjeto>   
+<DeclaracionObjeto> →  68  <Arreglo> 72 <Arreglo> <AsignacionObjeto>  52  
+<AsignacionObjeto> →  95 <AsignacionObjeto1>  
+<AsignacionObjeto> →   λ   
+<AsignacionObjeto1> → 72  
+<AsignacionObjeto1> → 26  
+<AsignacionObjeto1> → 24  68  <Instancia>  
+<Instancia> → 58 <Argumento> 59  
+<Instancia> → 56 73 57  
+<InicializarObjeto> → 72 <AsignacionObjeto> 52  
+<Valor> → <Numero>  
+<Valor> → 76 
+<Valor> → 75 <Concatenacion> 
+<Valor> → <Boleano>  
+<Valor> →  26  
+<Numero> → 73  
+<Numero> →  74  
+<Boleano> →  40 
+<Boleano> → 41  
+<Constructor> → 96  68  58 <Argumento> 59 54 <Sentencia> 55    
+<Argumento> → <TipoDato> 70 <Argumento1>  
+<Argumento> →  λ   
+<Argumento1> →  50 <Argumento>  
+<Argumento1> → λ  
+<Metodo> → <Funcion>  
+<Metodo> →  <Procedimiento>  
+<Procedimiento> → 11 <Procedimiento1>  
+<Procedimiento1> → <ProcedimientoNormal>  
+<Procedimiento1> → <ProcedimientoPrincipal>   
+<ProcedimientoPrincipal> → 23 58 42 56 57 70 59 54 <Sentencia> 55  
+<Funcion> → 12 <TipoDato> 69 58 <Argumento> 59 54 <Sentencia> 10 <Retorna> 52 55  
+<Retorna> → <ExpresionAsignacion>  
+<ProcedimientoNormal> →  69 58 <Argumento> 59 54 <Sentencia> 55  
+<LlamadaAtributo> → 25  
+<LlamadaAtributo> → λ  
+<LlamadaFuncion> → 69 58 <Parametro> 59   
+<Parametro> → <LlamadaAtributo> <TipoAtributo> <Parametro1> 
+<Parametro> →  λ  
+<Parametro1> → 50 <Parametro> 
+<Parametro1> → λ  
+<Iteracion> → 64 
+<Iteracion> → 65  
+<Sentencia> → <Sentencia2> <Sentencia>  
+<Sentencia> →  λ 
+<Sentencia2> → <Comentario> 
+<Sentencia2> → <SentenciaSi>  
+<Sentencia2> → <SentenciaMientras>  
+<Sentencia2> → <SentenciaHacerMientras> 
+<Sentencia2> → <SentenciaPara> 
+<Sentencia2> → <SentenciaCaso>  
+<Sentencia2> → <Atributo>  
+<Sentencia2> → <LlamadaFuncion> 52 
+<Sentencia2> → <OperacionSistema>  
+<SentenciaSi> → 34 58 <Condicion> 59 54 <Sentencia> 55 <SentenciaSi1>   
+<SentenciaSi1> → <SentenciaSino> 
+<SentenciaSi1> →  <SentenciaSinoSi>  
+<SentenciaSi1> →   λ  
+<SentenciaSino> → 35 54 <Sentencia> 55   
+<SentenciaSinoSi> → 36 58 <Condicion> 59 54 <Sentencia> 55 <SentenciaSi1>  
+<SentenciaPara> → 39 58 <Variable> 52 <Condicion> 52 70 <Iteracion> 59 54 <Sentencia> 55  
+<SentenciaMientras> → 37 58 <Condicion> 59 54  <Sentencia>  55 
+<SentenciaHacerMientras> → 38 54 <Sentencia> 55 37 58 <Condicion> 59 52 
+<SentenciaCaso> → 32 58  70 59 54 <Alternativa> 55  
+<Alternativa> → 33 <Valor> 53 <Sentencia> 30 52 <Alternativa1>  
+<Alternativa1> → <Alternativa>  
+<Alternativa1> → <Alternativa2>  
+<Alternativa1> →  λ   
+<Alternativa2> → 29 53 <Sentencia> 30 52   
+
+
+<Condicion> → <Operacion> <CondicionCompuesta>  
+<CondicionCompuesta> → <OperadorCondicion> <Condicion>    
+<OperadorCondicion> → 46
+<OperadorCondicion> → 48
+<OperadorCondicion> → λ  
+
+<Operacion> → <OperacionAritmetica>
+<Operacion> → <OperacionRelacional>
+<Operacion> → <OperacionLogica>
+<Operacion> → <OperacionUnaria>
+<Operacion> → <Mensaje>
+
+
+
+<OperacionAritmetica> →  58 <OperacionAritmetica> 59 <OperadorAritmetico> 
+<OperacionAritmetica> → <Numero> <OperadorAritmetico>
+<OperacionAritmetica> → <LladamaAtributo> <TipoAtributo> <OperadorAritmetico>
+<OperacionAritmetica> → <LladamaFuncion> <OperadorAritmetico>
+<OperadorAritmetico> → 44 <OperacionAritmetica> 
+<OperadorAritmetico> → 45 <OperacionAritmetica> 
+<OperadorAritmetico> → λ
+
+
+<OperacionRelacional> →  58 <OperacionRelacional> 59 <OperadorRelacional> 
+<OperacionRelacional> → <Numero> <OperadorRelacional>
+<OperacionRelacional> → <LladamaAtributo> <TipoAtributo> <OperadorRelacional>
+<OperacionRelacional> → <LladamaFuncion> <OperadorRelacional>
+<OperacionRelacional> → 75 <OperadorRelacional>
+<OperacionRelacional> → 76 <OperacionRelacional>
+<OperacionRelacional> → 26 <OperacionRelacional>
+<OperadorRelacional> → 46 <OperacionRelacional> 
+<OperadorRelacional> → λ
+
+<OperacionLogica> →  58 <OperacionLogica> 59 <OperadorLogico> 
+<OperacionLogica> → <LladamaAtributo> <TipoAtributo> <OperadorLogico>
+<OperacionLogica> → <LladamaFuncion> <OperadorLogico>
+<OperacionLogica> → <Booleano> <OperadorLogico>
+<OperadorLogico> → 46 <OperacionLogica> 
+<OperadorLogico> → λ
+
+<OperacionUnaria> → 49 58 <OperacionLogica> 59  
+<OperacionSistema> → 15 58 <OperacionSistema1> 59 52  
+<OperacionSistema1> → <Lectura>  
+<OperacionSistema1> → <Escritura>  
+<OperacionSistema1> → <Salida>  
+<Lectura> →  27 58 59    
+<Escritura> → 28 58 <Mensaje>  59  
+<Salida> → 31 58 59  
+<Mensaje> → <Operacion> <Concatenacion>  
+<Mensaje> → λ   
+<Concatenacion> → 44 <Mensaje> 
+<Concatenacion> → λ
