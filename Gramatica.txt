@@ -1,47 +1,77 @@
-<Proyecto> → 66 54 <Clase> 55  
-<Clase> → <Clase20> <Paquete> <Clase20> <libreria> <ClaseM> <Clase>
-<Clase> → λ 
-<Clase20> → <Comentario> <Clase20> 
-<Clase20> → λ   
-<libreria> → 6 77 52 <libreria> 
-<libreria> → λ   
-<ClaseM> → <ModificadorAcceso> <Estatico> <Polimorfismo>
-<Polimorfismo> → 20 4  68  <Extension> 54 <Instruccion> 55  
-<Polimorfismo> → 17  4  68  <Extension> 54 <Instruccion> 55  
-<Polimorfismo> → 4  68  <Extension> 54 <Instruccion> 55  
+<Proyecto> → 66 54 <ComentariosIniciales> <Clase> 55  
+
+<ComentariosIniciales> → <Comentario> <ComentariosIniciales> 
+<ComentariosIniciales> → λ 
+
+<ClaseG> → <Paquete> <Clase> <ClaseG>
+<ClaseG> → λ 
+
 <Paquete> → 5  67  52 
-<Extension> → <Herencia>  
-<Extension> → <Implementacion>  
-<Extension> → λ  
-<Herencia> → 18  68   <Implementacion>   
-<Implementacion> → <Implementar> 
-<Implementacion> → λ  
-<Implementar> →  19  68  <Implementar1>  
-<Implementar1>  →  50  68  <Implementar2>  
-<Implementar2> →  <Implementar1>  
-<Implementar2> →  λ   
-<Estatico> → 7  
-<Estatico> →  λ  
+
+<Clase> → <Comentario> <Clase>
+<Clase> → <Libreria> <Clase>
+<Clase> → <ModificadorAcceso> <Estatico> <Polimorfismo>
+<Clase> → λ 
+
+<Comentario> → 79  
+<Comentario> → 78 
+
+<Libreria> → 6 77 52
+
 <ModificadorAcceso> → 1 
 <ModificadorAcceso> →  2 
 <ModificadorAcceso> →  3   
 <ModificadorAcceso> →  λ  
+
+
+<Estatico> → 7  
+<Estatico> →  λ  
+
+
+<Polimorfismo> → 20 4  68  <Extension> 54 <Instruccion> 55  
+<Polimorfismo> → 17  4  68  <Extension> 54 <Instruccion> 55  
+<Polimorfismo> → 4  68  <Extension> 54 <Instruccion> 55 
+
+ 
+
+<Extension> → <Herencia>  
+<Extension> → <Implementacion>  
+<Extension> → λ  
+
+<Herencia> → 18  68   <Implementacion> 
+  
+<Implementacion> → <Implementar> 
+<Implementacion> → λ  
+
+<Implementar> →  19  68  <Implementar1>  
+<Implementar1>  →  50  68  <Implementar2>  
+<Implementar2> →  <Implementar1>  
+<Implementar2> →  λ   
+
+
 <Instruccion> → <Comentario> <Instruccion> 
 <Instruccion> → <ModificadorAcceso> <ControlAcceso>  <Instruccion> 
 <Instruccion> → λ 
+
 <ControlAcceso> →   7 <Encapsulamiento>
 <ControlAcceso> → <Encapsulamiento>
 <ControlAcceso> → <Constructor> 
+
 <Encapsulamiento> → <Atributo> 
 <Encapsulamiento> → <Metodo>  
+
 <Atributo> → <DeclaracionAtributo>   
 <Atributo> →  <Objeto>  
 <Atributo> →  <AsignacionAtributo> 52  
+
 <DeclaracionAtributo> → <TipoDato> <Arreglo> <AsignacionAtributo>  52    
+
 <AsignacionAtributo>  → <Variable> 
 <AsignacionAtributo>  → <Constante>   
-<Variable> → 70 <Arreglo> <AsignacionAtributo1>   
+
+<Variable> → 70 <Arreglo> <AsignacionAtributo2>   
 <Constante> → 71  <Arreglo>  <AsignacionAtributo1>   
+
 <Arreglo> → 56 <AsignacionArreglo> 57 <Arreglo1>  
 <Arreglo> →  λ  
 <Arreglo1> → 56 <AsignacionArreglo> 57 <Arreglo1>  
@@ -49,9 +79,11 @@
 <AsignacionArreglo> → 73  
 <AsignacionArreglo> →  λ  
 <TipoAtributo> →  70 
-<TipoAtributo> → 71    
+<TipoAtributo> → 71
+    
 <TipoDato> → 42   
-<TipoDato> →  43   
+<TipoDato> →  43 
+
 <AsignacionAtributo1>  → <Igualacion> <Asignacion>  
 <Igualacion> → 95  
 <Igualacion> → 47   
@@ -101,8 +133,7 @@
 <Argumento> →  λ   
 <Argumento1> →  50 <Argumento>  
 <Argumento1> → λ  
-<Comentario> → 79  
-<Comentario> → 78   
+  
 <Metodo> → <Funcion>  
 <Metodo> →  <Procedimiento>  
 <Procedimiento> → 11 <Procedimiento1>  
